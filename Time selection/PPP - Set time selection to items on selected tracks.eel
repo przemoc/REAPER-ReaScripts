@@ -1,0 +1,54 @@
+/*
+ * EEL script for REAPER v5+
+ *
+ * Copyright (C) 2015 Przemyslaw Pawelczyk <przemoc@gmail.com>
+ *
+ * This script is licensed under the terms of the MIT license.
+ * https://opensource.org/licenses/MIT
+ */
+
+
+function PPP_SetTimeSelToItemsOnSelTracks(proj)
+ local (descfmt, desc,
+        ts_beg, ts_end, t, tk_cnt, it_tot, tk,
+        i, it_cnt, it, it_beg, it_end,
+       )
+(
+	descfmt = "Set time selection to items (%u) on selected tracks (%u)";
+
+	ts_beg = ts_end = t = -1;
+	tk_cnt = CountSelectedTracks(proj);
+	it_tot = 0;
+
+	while (   ((t += 1) < tk_cnt)
+	       && (tk = GetSelectedTrack(proj, t))
+	      ) (
+		i = -1;
+		it_cnt = GetTrackNumMediaItems(tk);
+		it_tot += it_cnt;
+
+		while (   ((i += 1) < it_cnt)
+		       && (it = GetTrackMediaItem(tk, i))
+		      ) (
+			it_beg = GetMediaItemInfo_Value(it, "D_POSITION");
+			it_end = it_beg + GetMediaItemInfo_Value(it, "D_LENGTH");
+			ts_beg =   it_beg < ts_beg || ts_beg === -1
+			         ? it_beg : ts_beg;
+			ts_end =   it_end > ts_end
+			         ? it_end : ts_end;
+		);
+	);
+
+	sprintf(desc, descfmt, it_tot, tk_cnt);
+	!it_tot ?
+		ts_beg = ts_end = 0;
+
+	GetSet_LoopTimeRange2(proj, /*isSet*/1, /*isLoop*/0, ts_beg, ts_end, 0);
+	Undo_OnStateChangeEx2(proj, desc, /*UNDO_STATE_MISCCFG*/8, -1);
+	UpdateTimeline();
+
+	it_tot;
+);
+
+
+PPP_SetTimeSelToItemsOnSelTracks(0);
