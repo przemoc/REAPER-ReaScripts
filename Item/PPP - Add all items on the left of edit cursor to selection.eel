@@ -1,0 +1,55 @@
+/*
+ * EEL script for REAPER v5+
+ *
+ * Copyright (C) 2015 Przemyslaw Pawelczyk <przemoc@gmail.com>
+ *
+ * This script is licensed under the terms of the MIT license.
+ * https://opensource.org/licenses/MIT
+ */
+
+
+/// Returns number of all items on the left of edit cursor.
+function PPP_ItemSelAdd_AllOnLeftOfEditCursor(proj)
+ local (descfmt, desc,
+        t, tk_cnt, it_tot, tk,
+        i, it_cnt, it, it_beg, it_end,
+        ec_pos, ec_posstr,
+       )
+(
+	descfmt = "Add all items (%u) on the left of edit cursor (at %s) to selection";
+
+	it_tot = 0;
+	ec_pos = GetCursorPositionEx(proj);
+	format_timestr_pos(ec_pos, ec_posstr, -1);
+
+	t = -1;
+	tk_cnt = CountTracks(proj);
+
+	Undo_BeginBlock2(proj);
+	while (   ((t += 1) < tk_cnt)
+	       && (tk = GetTrack(proj, t))
+	      ) (
+		i = -1;
+		it_cnt = GetTrackNumMediaItems(tk);
+
+		while (   ((i += 1) < it_cnt)
+		       && (it = GetTrackMediaItem(tk, i))
+		      ) (
+			it_beg = GetMediaItemInfo_Value(it, "D_POSITION");
+			it_end = it_beg + GetMediaItemInfo_Value(it, "D_LENGTH");
+			(it_beg < ec_pos) ? (
+				SetMediaItemInfo_Value(it, "B_UISEL", 1);
+				it_tot += 1;
+			);
+		);
+	);
+	sprintf(desc, descfmt, it_tot, ec_posstr);
+	Undo_EndBlock2(proj, desc, /*UNDO_STATE_ITEMS*/4);
+
+	UpdateArrange();
+
+	it_tot;
+);
+
+
+PPP_ItemSelAdd_AllOnLeftOfEditCursor(0);

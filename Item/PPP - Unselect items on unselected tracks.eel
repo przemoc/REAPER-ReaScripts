@@ -1,0 +1,53 @@
+/*
+ * EEL script for REAPER v5+
+ *
+ * Copyright (C) 2015 Przemyslaw Pawelczyk <przemoc@gmail.com>
+ *
+ * This script is licensed under the terms of the MIT license.
+ * https://opensource.org/licenses/MIT
+ */
+
+
+/// Returns number of unselected items on unselected tracks.
+function PPP_ItemSelRem_OnUnselTracks(proj)
+ local (descfmt, desc,
+        t, tk_cnt, tk_tot, it_tot, tk,
+        i, it_cnt, it,
+       )
+(
+	descfmt = "Unselect items (%u) on unselected tracks (%u)";
+
+	tk_tot = it_tot = 0;
+
+	t = -1;
+	tk_cnt = CountTracks(proj);
+
+	Undo_BeginBlock2(proj);
+	while (   ((t += 1) < tk_cnt)
+	       && (tk = GetTrack(proj, t))
+	      ) (
+		(!IsTrackSelected(tk)) ? (
+			i = -1;
+			it_cnt = GetTrackNumMediaItems(tk);
+			tk_tot += 1;
+
+			while (   ((i += 1) < it_cnt)
+			       && (it = GetTrackMediaItem(tk, i))
+			      ) (
+				(GetMediaItemInfo_Value(it, "B_UISEL")) ? (
+					SetMediaItemInfo_Value(it, "B_UISEL", 0);
+					it_tot += 1;
+				);
+			);
+		);
+	);
+	sprintf(desc, descfmt, it_tot, tk_tot);
+	Undo_EndBlock2(proj, desc, /*UNDO_STATE_ITEMS*/4);
+
+	UpdateArrange();
+
+	it_tot;
+);
+
+
+PPP_ItemSelRem_OnUnselTracks(0);
