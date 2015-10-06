@@ -8,7 +8,7 @@
  */
 
 
-function PPP_SetTimeSelToItemsOnSelTracks(proj)
+function PPP_TimeSelSet_ItemsOnSelTracks(proj)
  local (descfmt, desc,
         ts_beg, ts_end, t, tk_cnt, it_tot, tk,
         i, it_cnt, it, it_beg, it_end,
@@ -51,4 +51,4 @@ function PPP_SetTimeSelToItemsOnSelTracks(proj)
 );
 
 
-PPP_SetTimeSelToItemsOnSelTracks(0);
+PPP_TimeSelSet_ItemsOnSelTracks(0);
