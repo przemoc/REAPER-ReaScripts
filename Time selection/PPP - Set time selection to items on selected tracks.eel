@@ -8,6 +8,7 @@
  */
 
 
+/// Returns number of items on selected tracks.
 function PPP_TimeSelSet_ItemsOnSelTracks(proj)
  local (descfmt, desc,
         ts_beg, ts_end, t, tk_cnt, it_tot, tk,
