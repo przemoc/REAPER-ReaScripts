@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index version="1" name="Przemoc's ReaScripts" commit="a293a0efb328d120b82b283805e7eb5cc7626bb8">
+  <metadata>
+    <link rel="website" href="http://forum.cockos.com/showthread.php?t=181023">Cockos Forum thread</link>
+    <link rel="website" href="http://forum.cockos.com/member.php?u=102065">Cockos Forum user</link>
+    <link rel="website" href="https://github.com/przemoc/REAPER-ReaScripts">Repository</link>
+  </metadata>
+  <category name="Item">
+    <reapack name="PPP - Add all items on the left of edit cursor to selection.eel" desc="Add all items on the left of edit cursor to selection" type="script">
+      <version name="1.0" author="przemoc" time="2015-10-07T00:13:43+02:00">
+        <source main="true">https://github.com/przemoc/REAPER-ReaScripts/raw/c72cbf27fcdf1f4b579204228d6fb1a2a6672c95/Item/PPP%20-%20Add%20all%20items%20on%20the%20left%20of%20edit%20cursor%20to%20selection.eel</source>
+      </version>
+    </reapack>
+    <reapack name="PPP - Add all items on the right of edit cursor to selection.eel" desc="Add all items on the right of edit cursor to selection" type="script">
+      <version name="1.0" author="przemoc" time="2015-10-07T00:13:43+02:00">
+        <source main="true">https://github.com/przemoc/REAPER-ReaScripts/raw/c72cbf27fcdf1f4b579204228d6fb1a2a6672c95/Item/PPP%20-%20Add%20all%20items%20on%20the%20right%20of%20edit%20cursor%20to%20selection.eel</source>
+      </version>
+    </reapack>
+    <reapack name="PPP - Add items under edit cursor to selection.eel" desc="Add items under edit cursor to selection" type="script">
+      <version name="1.0" author="przemoc" time="2015-10-07T00:13:43+02:00">
+        <source main="true">https://github.com/przemoc/REAPER-ReaScripts/raw/c72cbf27fcdf1f4b579204228d6fb1a2a6672c95/Item/PPP%20-%20Add%20items%20under%20edit%20cursor%20to%20selection.eel</source>
+      </version>
+    </reapack>
+    <reapack name="PPP - Add whole items on the left of edit cursor to selection.eel" desc="Add whole items on the left of edit cursor to selection" type="script">
+      <version name="1.0" author="przemoc" time="2015-10-07T00:13:43+02:00">
+        <source main="true">https://github.com/przemoc/REAPER-ReaScripts/raw/c72cbf27fcdf1f4b579204228d6fb1a2a6672c95/Item/PPP%20-%20Add%20whole%20items%20on%20the%20left%20of%20edit%20cursor%20to%20selection.eel</source>
+      </version>
+    </reapack>
+    <reapack name="PPP - Add whole items on the right of edit cursor to selection.eel" desc="Add whole items on the right of edit cursor to selection" type="script">
+      <version name="1.0" author="przemoc" time="2015-10-07T00:13:43+02:00">
+        <source main="true">https://github.com/przemoc/REAPER-ReaScripts/raw/c72cbf27fcdf1f4b579204228d6fb1a2a6672c95/Item/PPP%20-%20Add%20whole%20items%20on%20the%20right%20of%20edit%20cursor%20to%20selection.eel</source>
+      </version>
+    </reapack>
+    <reapack name="PPP - Unselect all items on the left of edit cursor.eel" desc="Unselect all items on the left of edit cursor" type="script">
+      <version name="1.0" author="przemoc" time="2015-10-07T00:13:43+02:00">
+        <source main="true">https://github.com/przemoc/REAPER-ReaScripts/raw/c72cbf27fcdf1f4b579204228d6fb1a2a6672c95/Item/PPP%20-%20Unselect%20all%20items%20on%20the%20left%20of%20edit%20cursor.eel</source>
+      </version>
+    </reapack>
+    <reapack name="PPP - Unselect all items on the right of edit cursor.eel" desc="Unselect all items on the right of edit cursor" type="script">
+      <version name="1.0" author="przemoc" time="2015-10-07T00:13:43+02:00">
+        <source main="true">https://github.com/przemoc/REAPER-ReaScripts/raw/c72cbf27fcdf1f4b579204228d6fb1a2a6672c95/Item/PPP%20-%20Unselect%20all%20items%20on%20the%20right%20of%20edit%20cursor.eel</source>
+      </version>
+    </reapack>
+    <reapack name="PPP - Unselect items on unselected tracks.eel" desc="Unselect items on unselected tracks" type="script">
+      <version name="1.0" author="przemoc" time="2015-10-07T00:13:43+02:00">
+        <source main="true">https://github.com/przemoc/REAPER-ReaScripts/raw/c72cbf27fcdf1f4b579204228d6fb1a2a6672c95/Item/PPP%20-%20Unselect%20items%20on%20unselected%20tracks.eel</source>
+      </version>
+    </reapack>
+    <reapack name="PPP - Unselect items under edit cursor.eel" desc="Unselect items under edit cursor" type="script">
+      <version name="1.0" author="przemoc" time="2015-10-07T00:13:43+02:00">
+        <source main="true">https://github.com/przemoc/REAPER-ReaScripts/raw/c72cbf27fcdf1f4b579204228d6fb1a2a6672c95/Item/PPP%20-%20Unselect%20items%20under%20edit%20cursor.eel</source>
+      </version>
+    </reapack>
+    <reapack name="PPP - Unselect whole items on the left of edit cursor.eel" desc="Unselect whole items on the left of edit cursor" type="script">
+      <version name="1.0" author="przemoc" time="2015-10-07T00:13:43+02:00">
+        <source main="true">https://github.com/przemoc/REAPER-ReaScripts/raw/c72cbf27fcdf1f4b579204228d6fb1a2a6672c95/Item/PPP%20-%20Unselect%20whole%20items%20on%20the%20left%20of%20edit%20cursor.eel</source>
+      </version>
+    </reapack>
+    <reapack name="PPP - Unselect whole items on the right of edit cursor.eel" desc="Unselect whole items on the right of edit cursor to selection" type="script">
+      <version name="1.0" author="przemoc" time="2015-10-07T00:13:43+02:00">
+        <source main="true">https://github.com/przemoc/REAPER-ReaScripts/raw/c72cbf27fcdf1f4b579204228d6fb1a2a6672c95/Item/PPP%20-%20Unselect%20whole%20items%20on%20the%20right%20of%20edit%20cursor.eel</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Time selection">
+    <reapack name="PPP - Set time selection to items on selected tracks.eel" desc="Set time selection to items on selected tracks" type="script">
+      <version name="1.0" author="przemoc" time="2015-10-07T00:07:13+02:00">
+        <source main="true">https://github.com/przemoc/REAPER-ReaScripts/raw/d723fc254852cd3d34ea19ccbd33dd33f14b8095/Time%20selection/PPP%20-%20Set%20time%20selection%20to%20items%20on%20selected%20tracks.eel</source>
+      </version>
+    </reapack>
+  </category>
+</index>
