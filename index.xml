@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="Przemoc's ReaScripts" commit="a293a0efb328d120b82b283805e7eb5cc7626bb8">
+<index version="1" name="Przemoc's ReaScripts" commit="b0a6cb7fc5963f31cca7151f7133928e08eb5706">
   <metadata>
     <link rel="website" href="http://forum.cockos.com/showthread.php?t=181023">Cockos Forum thread</link>
     <link rel="website" href="http://forum.cockos.com/member.php?u=102065">Cockos Forum user</link>
     <link rel="website" href="https://github.com/przemoc/REAPER-ReaScripts">Repository</link>
   </metadata>
+  <category name="Cursor">
+    <reapack name="PPP - Move edit cursor left by time selection length.eel" desc="Move edit cursor left by time selection length" type="script">
+      <version name="1.0" author="przemoc" time="2016-10-09T22:07:02+02:00">
+        <source main="true">https://github.com/przemoc/REAPER-ReaScripts/raw/b0a6cb7fc5963f31cca7151f7133928e08eb5706/Cursor/PPP%20-%20Move%20edit%20cursor%20left%20by%20time%20selection%20length.eel</source>
+      </version>
+    </reapack>
+    <reapack name="PPP - Move edit cursor right by time selection length.eel" desc="Move edit cursor right by time selection length" type="script">
+      <version name="1.0" author="przemoc" time="2016-10-09T22:07:02+02:00">
+        <source main="true">https://github.com/przemoc/REAPER-ReaScripts/raw/b0a6cb7fc5963f31cca7151f7133928e08eb5706/Cursor/PPP%20-%20Move%20edit%20cursor%20right%20by%20time%20selection%20length.eel</source>
+      </version>
+    </reapack>
+  </category>
   <category name="Item">
     <reapack name="PPP - Add all items on the left of edit cursor to selection.eel" desc="Add all items on the left of edit cursor to selection" type="script">
       <version name="1.0" author="przemoc" time="2015-10-07T00:13:43+02:00">
@@ -29,6 +41,46 @@
     <reapack name="PPP - Add whole items on the right of edit cursor to selection.eel" desc="Add whole items on the right of edit cursor to selection" type="script">
       <version name="1.0" author="przemoc" time="2015-10-07T00:13:43+02:00">
         <source main="true">https://github.com/przemoc/REAPER-ReaScripts/raw/c72cbf27fcdf1f4b579204228d6fb1a2a6672c95/Item/PPP%20-%20Add%20whole%20items%20on%20the%20right%20of%20edit%20cursor%20to%20selection.eel</source>
+      </version>
+    </reapack>
+    <reapack name="PPP - Move only left edge of selected items left by time selection length preserving source position.eel" desc="Move only left edge of selected items left by time selection length preserving source position" type="script">
+      <version name="1.0" author="przemoc" time="2016-10-09T22:07:02+02:00">
+        <source main="true">https://github.com/przemoc/REAPER-ReaScripts/raw/b0a6cb7fc5963f31cca7151f7133928e08eb5706/Item/PPP%20-%20Move%20only%20left%20edge%20of%20selected%20items%20left%20by%20time%20selection%20length%20preserving%20source%20position.eel</source>
+      </version>
+    </reapack>
+    <reapack name="PPP - Move only left edge of selected items left by time selection length.eel" desc="Move only left edge of selected items left by time selection length" type="script">
+      <version name="1.0" author="przemoc" time="2016-10-09T22:07:02+02:00">
+        <source main="true">https://github.com/przemoc/REAPER-ReaScripts/raw/b0a6cb7fc5963f31cca7151f7133928e08eb5706/Item/PPP%20-%20Move%20only%20left%20edge%20of%20selected%20items%20left%20by%20time%20selection%20length.eel</source>
+      </version>
+    </reapack>
+    <reapack name="PPP - Move only left edge of selected items right by time selection length preserving source position.eel" desc="Move only left edge of selected items right by time selection length preserving source position" type="script">
+      <version name="1.0" author="przemoc" time="2016-10-09T22:07:02+02:00">
+        <source main="true">https://github.com/przemoc/REAPER-ReaScripts/raw/b0a6cb7fc5963f31cca7151f7133928e08eb5706/Item/PPP%20-%20Move%20only%20left%20edge%20of%20selected%20items%20right%20by%20time%20selection%20length%20preserving%20source%20position.eel</source>
+      </version>
+    </reapack>
+    <reapack name="PPP - Move only left edge of selected items right by time selection length.eel" desc="Move only left edge of selected items right by time selection length" type="script">
+      <version name="1.0" author="przemoc" time="2016-10-09T22:07:02+02:00">
+        <source main="true">https://github.com/przemoc/REAPER-ReaScripts/raw/b0a6cb7fc5963f31cca7151f7133928e08eb5706/Item/PPP%20-%20Move%20only%20left%20edge%20of%20selected%20items%20right%20by%20time%20selection%20length.eel</source>
+      </version>
+    </reapack>
+    <reapack name="PPP - Move only right edge of selected items left by time selection length.eel" desc="Move only right edge of selected items left by time selection length" type="script">
+      <version name="1.0" author="przemoc" time="2016-10-09T22:07:02+02:00">
+        <source main="true">https://github.com/przemoc/REAPER-ReaScripts/raw/b0a6cb7fc5963f31cca7151f7133928e08eb5706/Item/PPP%20-%20Move%20only%20right%20edge%20of%20selected%20items%20left%20by%20time%20selection%20length.eel</source>
+      </version>
+    </reapack>
+    <reapack name="PPP - Move only right edge of selected items right by time selection length.eel" desc="Move only right edge of selected items right by time selection length" type="script">
+      <version name="1.0" author="przemoc" time="2016-10-09T22:07:02+02:00">
+        <source main="true">https://github.com/przemoc/REAPER-ReaScripts/raw/b0a6cb7fc5963f31cca7151f7133928e08eb5706/Item/PPP%20-%20Move%20only%20right%20edge%20of%20selected%20items%20right%20by%20time%20selection%20length.eel</source>
+      </version>
+    </reapack>
+    <reapack name="PPP - Move selected items left by time selection length.eel" desc="Move selected items left by time selection length" type="script">
+      <version name="1.0" author="przemoc" time="2016-10-09T22:07:02+02:00">
+        <source main="true">https://github.com/przemoc/REAPER-ReaScripts/raw/b0a6cb7fc5963f31cca7151f7133928e08eb5706/Item/PPP%20-%20Move%20selected%20items%20left%20by%20time%20selection%20length.eel</source>
+      </version>
+    </reapack>
+    <reapack name="PPP - Move selected items right by time selection length.eel" desc="Move selected items right by time selection length" type="script">
+      <version name="1.0" author="przemoc" time="2016-10-09T22:07:02+02:00">
+        <source main="true">https://github.com/przemoc/REAPER-ReaScripts/raw/b0a6cb7fc5963f31cca7151f7133928e08eb5706/Item/PPP%20-%20Move%20selected%20items%20right%20by%20time%20selection%20length.eel</source>
       </version>
     </reapack>
     <reapack name="PPP - Unselect all items on the left of edit cursor.eel" desc="Unselect all items on the left of edit cursor" type="script">
