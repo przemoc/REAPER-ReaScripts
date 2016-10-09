@@ -1,0 +1,34 @@
+/*
+ * EEL script for REAPER v5+
+ *
+ * Copyright (C) 2016 Przemyslaw Pawelczyk <przemoc@gmail.com>
+ *
+ * This script is licensed under the terms of the MIT license.
+ * https://opensource.org/licenses/MIT
+ */
+
+
+function PPP_EditCur_MoveRightByTimeSelLen(proj)
+ local (descfmt, desc,
+        ec_pos,
+        ts_beg, ts_end, ts_len,
+       )
+(
+	descfmt = "Move edit cursor right by time selection length (%f)";
+
+	ec_pos = GetCursorPositionEx(proj);
+
+	ts_beg = ts_end = -1;
+	GetSet_LoopTimeRange2(proj, /*isSet*/0, /*isLoop*/0, ts_beg, ts_end, 0);
+	ts_len = ts_end - ts_beg;
+
+	Undo_BeginBlock2(proj);
+	SetEditCurPos2(proj, ec_pos + ts_len, /*moveview*/0, /*seekplay*/0);
+	sprintf(desc, descfmt, ts_len);
+	// 'Cursor position' has to be turned on in:
+	// General -> Undo settings -> Include selection
+	Undo_EndBlock2(proj, desc, /*UNDO_STATE_MISCCFG*/8);
+);
+
+
+PPP_EditCur_MoveRightByTimeSelLen(0);

@@ -1,0 +1,47 @@
+/*
+ * EEL script for REAPER v5+
+ *
+ * Copyright (C) 2016 Przemyslaw Pawelczyk <przemoc@gmail.com>
+ *
+ * This script is licensed under the terms of the MIT license.
+ * https://opensource.org/licenses/MIT
+ */
+
+
+/// Returns number of changed items.
+function PPP_ItemSel_MoveRightEdgeRightByTimeSelLen(proj)
+ local (descfmt, desc,
+        it_tot,
+        ts_beg, ts_end, ts_len,
+        i, it_cnt, it, it_len,
+       )
+(
+	descfmt = "Move only right edge of selected items (%u) right by time selection length (%f)";
+
+	it_tot = 0;
+	ts_beg = ts_end = -1;
+	GetSet_LoopTimeRange2(proj, /*isSet*/0, /*isLoop*/0, ts_beg, ts_end, 0);
+	ts_len = ts_end - ts_beg;
+
+	it_cnt = CountSelectedMediaItems(proj);
+	i = -1;
+
+	Undo_BeginBlock2(proj);
+	while (   ((i += 1) < it_cnt)
+	       && (it = GetSelectedMediaItem(tk, i))
+	      ) (
+		it_len = GetMediaItemInfo_Value(it, "D_LENGTH");
+		SetMediaItemInfo_Value(it, "D_LENGTH", it_len + ts_len);
+		it_tot += 1;
+	);
+
+	sprintf(desc, descfmt, it_tot, ts_len);
+	Undo_EndBlock2(proj, desc, /*UNDO_STATE_ITEMS*/4);
+
+	UpdateArrange();
+
+	it_tot;
+);
+
+
+PPP_ItemSel_MoveRightEdgeRightByTimeSelLen(0);
