@@ -1,9 +1,9 @@
 #!/bin/sh
 
 ## Simplistic ReaPack index.xml generator
-##  v0.1.0 (2016-09-03)
+##  v0.1.1 (2018-08-07)
 ##
-## Copyright (C) 2016 Przemyslaw Pawelczyk <przemoc@gmail.com>
+## Copyright (C) 2016-2018 Przemyslaw Pawelczyk <przemoc@gmail.com>
 ##
 ## This script is licensed under the terms of the MIT license.
 ## https://opensource.org/licenses/MIT
@@ -96,7 +96,7 @@ catdirs | while read -r DIR; do
 			 sed -r '/^.*(ReaScript|JSFX) Name: [ \t]*/!d;s,,,;q' "$FILE" \
 			)
 		fi
-		FILEVERS=$(sed -r '/^.*[Vv]er(sion)?:?[ \t]*v?/!d;s,,,;q' "$FILE")
+		FILEVERS=$(sed -r '/^.*[Vv]er(sion)?:?[ \t]*v?/!d;s,,,;s,[ \t].*,,;q' "$FILE")
 		FILEVERS=${FILEVERS:-1.0}
 		FILEAUTH=$(sed -r '/^.*[Aa]uthor:?[ \t]*/!d;s,,,;q' "$FILE")
 		FILEAUTH=${FILEAUTH:-$REPO_AUTH}
