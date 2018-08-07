@@ -6,6 +6,7 @@
  * This script is licensed under the terms of the MIT license.
  * https://opensource.org/licenses/MIT
  */
+/* version 1.01 */
 
 
 /// Returns number of changed items.
@@ -25,10 +26,10 @@ function PPP_ItemSel_MoveLeftEdgeRightByTimeSelLen_KeepSrcPos(proj)
 	ts_len = ts_end - ts_beg;
 
 	it_cnt = CountSelectedMediaItems(proj);
-	i = -1;
+	i = it_cnt;
 
 	Undo_BeginBlock2(proj);
-	while (   ((i += 1) < it_cnt)
+	while (   ((i -= 1) >= 0)
 	       && (it = GetSelectedMediaItem(tk, i))
 	      ) (
 		it_beg = GetMediaItemInfo_Value(it, "D_POSITION");
